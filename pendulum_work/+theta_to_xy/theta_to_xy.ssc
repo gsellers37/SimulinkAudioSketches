@@ -1,0 +1,30 @@
+component theta_to_xy
+% PS Math Function ::fixed
+% This block applies a mathematical function to the input u:
+%
+% y = fcn(u)
+%
+% All connections are physical signal ports.
+
+% Copyright 2007-2016 The MathWorks, Inc.
+
+inputs
+    ang = { 1, '1' }; % :left
+    L = {1, '1'};
+    x0 = {1, '1'};
+    y0 = {1, '1'};
+end
+
+outputs
+    x = { 1, '1' }; % :right
+    y = { 1, '1' };
+end
+  
+equations
+    
+    x==x0 + L*cos(ang-pi/2);
+    y==y0 + L*sin(ang-pi/2);
+    
+end
+
+end

@@ -1,0 +1,25 @@
+component wrap_angle
+% PS Math Function ::fixed
+% This block applies a mathematical function to the input u:
+%
+% y = fcn(u)
+%
+% All connections are physical signal ports.
+
+% Copyright 2007-2016 The MathWorks, Inc.
+
+inputs
+    I = { 1, '1' }; % :left
+end
+
+outputs
+    O = { 1, '1' }; % :right
+end
+  
+equations
+    
+    O==mod(I-pi,2*pi)-pi;
+    
+end
+
+end
